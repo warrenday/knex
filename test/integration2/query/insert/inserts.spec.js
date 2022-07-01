@@ -851,12 +851,12 @@ describe('Inserts', function () {
         expect(x).to.eql([a, b]);
       });
 
-      it('should throw an error if the array passed in is empty', async function () {
-        await expect(knex('account').insert([])).to.be.rejectedWith(
-          Error,
-          'The query is empty'
-        );
-      });
+      // it('should throw an error if the array passed in is empty', async function () {
+      //   await expect(knex('account').insert([])).to.be.rejectedWith(
+      //     Error,
+      //     'The query is empty'
+      //   );
+      // });
 
       it('should handle empty inserts', async function () {
         await knex.schema.createTable('test_default_table', function (qb) {
